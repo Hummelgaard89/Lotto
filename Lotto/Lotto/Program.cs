@@ -14,7 +14,7 @@ namespace Lotto
         {
             //Laver en brugerkupon
             int[] Brugertal = new int[7];
-            Random ranbruger = new Random();
+            Random ran = new Random();
             int Bi;
             //
             Console.WriteLine("Dine tal er følgende:\n");
@@ -23,7 +23,7 @@ namespace Lotto
                 int Bj = 0;
                 while (true)
                 {
-                    Bj = ranbruger.Next(1, 20);
+                    Bj = ran.Next(1, 20);
                     if (!Contains(Brugertal, Bj)) break;
                 }
                 Brugertal[Bi] = Bj;
@@ -33,7 +33,6 @@ namespace Lotto
             //
             //Laver en vinder kupon(trækker de 7 vindertal)
             int[] Vindertal = new int[7];
-            Random ranvinder = new Random();
             int Vi;
             //
             Console.WriteLine("\n\n\nVindertallene er følgende:\n");
@@ -42,14 +41,14 @@ namespace Lotto
                 int Vj = 0;
                 while (true)
                 {
-                    Vj = ranvinder.Next(1, 20);
+                    Vj = ran.Next(1, 20);
                     if (!Contains(Vindertal, Vj)) break;
                 }
                 Vindertal[Vi] = Vj;
                 Console.WriteLine(Vindertal[Vi]);
             }
             //End Vinderkupon
-
+            //
             //tjekker hvor mange brugeren har rigtige
             int Rigtige = 0;
             Console.WriteLine("\n\nAntal brugeren har rigtige\n");
