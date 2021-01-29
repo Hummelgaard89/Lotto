@@ -66,7 +66,9 @@ namespace Lotto
                         VT++;
                     }
                 }
-            }
+            }//END RIGTIGE
+            //
+            //Fortæller hvad du vinder af præmie med x antal rigtige
             switch (Rigtige)
             {
                 case 0:
@@ -98,7 +100,7 @@ namespace Lotto
                 case 7:
                     Console.WriteLine("TILLYKKE!!! Du vandt 20.271.035 kr.");
                     break;
-            }
+            }//END PRÆMIE
             Console.WriteLine(Rigtige);
             Console.ReadLine();
         }//END MAIN
